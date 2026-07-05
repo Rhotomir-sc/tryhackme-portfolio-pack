@@ -2,7 +2,8 @@
 
 This repository contains my hands-on cybersecurity lab documentation from TryHackMe.
 
-I use this repository to document selected labs, learning notes, screenshots, and reflections in a structured way.  
+I use this repository to document selected labs, learning notes, screenshots, and reflections in a structured way.
+
 The goal is not only to show completed rooms, but to explain what I practiced and how each lab supports my cybersecurity learning path.
 
 ---

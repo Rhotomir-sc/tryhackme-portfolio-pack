@@ -1,80 +1,78 @@
-# 09 — Windows Event Log Analysis
+# 09 - Windows Event Log Analysis
 
-## Lab Status
-
-Documentation in progress.
-
----
-
-## Lab Goal
-
-The goal of this lab is to practice basic Windows event log analysis.
-
-This lab focuses on understanding Windows event logs, event IDs, timestamps, users, hosts, and basic security-related observations from a cybersecurity student perspective.
+| Information | Details |
+|---|---|
+| Difficulty | Beginner |
+| Category | SOC Logs & Alert Triage |
+| Platform | TryHackMe |
+| Related Google Module | Detection & Response |
 
 ---
 
-## Why This Lab Matters
+## Overview
 
-Windows event logs are important for cybersecurity because they help analysts review authentication activity, system behavior, suspicious events, and investigation timelines.
-
-This lab supports my learning path in:
-
-- Windows security basics
-- Event log analysis
-- SOC Level 1 foundations
-- Authentication review
-- Incident investigation basics
-- Security monitoring
+*This section will briefly introduce the lab and explain why Windows event logs are useful for system monitoring and security investigations.*
 
 ---
 
-## Tools and Concepts Practiced
+## Learning Goal
 
-- Windows Event Viewer
-- Event IDs
-- Timestamps
-- User account activity
-- Host information
-- Logon events
-- Security logs
-- Basic event interpretation
+*This section will explain what I aimed to learn about navigating Windows logs, reviewing event details, and recognizing events that may require attention.*
 
 ---
 
-## Planned Evidence
+## What I Practiced
 
-This lab will include screenshots or outputs related to:
-
-1. Opening Windows event logs
-2. Reviewing security-related events
-3. Identifying event IDs
-4. Checking timestamps
-5. Reviewing user or host information
-6. Noting suspicious or important events
-7. Writing basic findings
-8. Final lab completion or summary evidence
+- Navigating Windows Event Viewer
+- Reviewing common Windows log categories
+- Identifying useful Event IDs
+- Checking timestamps, users, and affected systems
+- Comparing normal and suspicious events
+- Recording short event log observations
 
 ---
 
-## Event ID Notes
+## Google Cybersecurity Connection
 
-To be completed after reviewing event logs.
-
----
-
-## Basic Findings
-
-To be completed after identifying important events.
+*This section will briefly connect the lab with the related Detection & Response module in my Google Cybersecurity portfolio.*
 
 ---
 
-## Common Mistakes / Lessons Learned
+## Event Log Notes
 
-To be completed after reviewing the lab process.
+*This section will include short observations from the Windows events reviewed during the lab.*
+
+- Log category
+- Event ID
+- Event time
+- User or system involved
+- Important event details
+- Reason the event required attention
 
 ---
 
-## Final Reflection
+## Screenshots
 
-To be completed after the lab documentation is finished.
+### Google Cybersecurity
+
+*Relevant course screenshots will be added here.*
+
+### TryHackMe
+
+*Selected screenshots from the hands-on lab will be added here.*
+
+---
+
+## Result
+
+### What I Learned
+
+*This section will summarize what I learned about reviewing Windows event logs.*
+
+### What I Found Most Useful
+
+*This section will briefly explain which Event Viewer feature or event detail was most useful to me.*
+
+### Next Step
+
+*The next lab will move into cloud security fundamentals with identity and access management.*

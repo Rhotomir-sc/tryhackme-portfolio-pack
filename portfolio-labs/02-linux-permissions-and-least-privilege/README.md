@@ -1,73 +1,76 @@
-# 02 — Linux Permissions
+# 02 - Linux Permissions and Least Privilege
 
-## Lab Status
-
-Documentation in progress.
-
----
-
-## Lab Goal
-
-The goal of this lab is to practice Linux file and directory permissions.
-
-This lab focuses on understanding read, write, and execute permissions, ownership, groups, and permission-related command outputs in a Linux environment.
+| Information | Details |
+|---|---|
+| Difficulty | Beginner |
+| Category | Linux & Access Control |
+| Platform | TryHackMe |
+| Related Google Module | Linux & SQL |
 
 ---
 
-## Why This Lab Matters
+## Overview
 
-Linux permissions are important for cybersecurity because weak or incorrect permissions can expose files, allow unauthorized access, or create security risks.
-
-This lab supports my learning path in:
-
-- Linux fundamentals
-- Access control basics
-- File permission analysis
-- Command-line practice
-- SOC and system security foundations
+*This section will briefly introduce the lab and explain why Linux file and directory permissions are important for system security.*
 
 ---
 
-## Tools and Concepts Practiced
+## Learning Goal
 
-- Linux terminal
-- `ls -l`
-- file ownership
-- group ownership
-- read, write, execute permissions
-- basic permission interpretation
-- permission changes with `chmod`
-- ownership changes with `chown` or `chgrp`
+*This section will explain what I aimed to learn about Linux permissions, ownership, and the principle of least privilege.*
 
 ---
 
-## Planned Evidence
+## What I Practiced
 
-This lab will include screenshots or outputs related to:
-
-1. Listing file permissions with `ls -l`
-2. Identifying owner and group information
-3. Understanding read, write, and execute bits
-4. Checking directory permissions
-5. Changing permissions with `chmod`
-6. Reviewing ownership-related output
-7. Comparing permission changes before and after
-8. Final lab completion or summary evidence
+- Reading Linux file and directory permissions
+- Understanding user, group, and other permissions
+- Reviewing file ownership
+- Changing permissions and ownership
+- Applying the principle of least privilege
 
 ---
 
-## Key Learning Notes
+## Google Cybersecurity Connection
 
-To be completed after adding notes and screenshots.
-
----
-
-## Common Mistakes / Lessons Learned
-
-To be completed after reviewing the lab process.
+*This section will briefly connect the lab with the related Linux & SQL module in my Google Cybersecurity portfolio.*
 
 ---
 
-## Final Reflection
+## Permission Notes
 
-To be completed after the lab documentation is finished.
+*This section will include short observations about the permission concepts practiced in the lab.*
+
+- Read, write, and execute permissions
+- User, group, and other permission groups
+- File and directory ownership
+- Basic use of `chmod` and `chown`
+- Why unnecessary permissions can create security risks
+
+---
+
+## Screenshots
+
+### Google Cybersecurity
+
+*Relevant course screenshots will be added here.*
+
+### TryHackMe
+
+*Selected screenshots from the hands-on lab will be added here.*
+
+---
+
+## Result
+
+### What I Learned
+
+*This section will summarize what I learned about Linux permissions and access control.*
+
+### What I Found Most Useful
+
+*This section will briefly explain which permission concept or command was most useful to me.*
+
+### Next Step
+
+*The next lab will move from Linux access control to basic network traffic analysis with Wireshark.*

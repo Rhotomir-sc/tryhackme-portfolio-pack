@@ -1,86 +1,78 @@
-# 05 — Log Analysis Basics
+# 05 - Log Analysis Basics
 
-## Lab Status
-
-Documentation in progress.
-
----
-
-## Lab Goal
-
-The goal of this lab is to practice basic log analysis concepts.
-
-This lab focuses on reading log entries, identifying important fields, understanding timestamps, and documenting basic observations from a cybersecurity student perspective.
+| Information | Details |
+|---|---|
+| Difficulty | Beginner |
+| Category | SOC Logs & Alert Triage |
+| Platform | TryHackMe |
+| Related Google Module | Detection & Response |
 
 ---
 
-## Why This Lab Matters
+## Overview
 
-Log analysis is important for cybersecurity because logs help analysts understand what happened, when it happened, and which user, system, or process may be involved.
-
-This lab supports my learning path in:
-
-- Log analysis fundamentals
-- SOC Level 1 foundations
-- Security monitoring basics
-- Incident investigation habits
-- Timeline awareness
-- Documentation practice
+*This section will briefly introduce the lab and explain why logs are important for understanding system activity and possible security events.*
 
 ---
 
-## Tools and Concepts Practiced
+## Learning Goal
 
-- Log entries
-- Timestamps
-- Source and destination information
-- Event details
-- Basic filtering
-- Suspicious activity review
-- Timeline notes
-- Short investigation summary
+*This section will explain what I aimed to learn about reading log entries, identifying useful details, and recognizing activity that may require attention.*
 
 ---
 
-## Planned Evidence
+## What I Practiced
 
-This lab will include screenshots or outputs related to:
-
-1. Opening or reviewing log data
-2. Identifying timestamps
-3. Reviewing important fields
-4. Finding relevant log entries
-5. Noting suspicious or important events
-6. Creating a short timeline
-7. Writing basic findings
-8. Final lab completion or summary evidence
+- Reviewing basic log entries
+- Identifying timestamps and event details
+- Recognizing successful and failed activity
+- Looking for unusual patterns
+- Separating normal events from potentially suspicious events
+- Writing short observations from the reviewed logs
 
 ---
 
-## Basic Findings
+## Google Cybersecurity Connection
 
-To be completed after reviewing the logs.
-
----
-
-## Timeline Notes
-
-To be completed after identifying important events.
+*This section will briefly connect the lab with the related Detection & Response module in my Google Cybersecurity portfolio.*
 
 ---
 
-## Key Learning Notes
+## Log Observations
 
-To be completed after adding notes and screenshots.
+*This section will include short observations from the logs reviewed during the lab.*
+
+- Log source
+- Important timestamps
+- Successful or failed events
+- Repeated activity
+- Entries that appeared unusual
+- Information useful for further investigation
 
 ---
 
-## Common Mistakes / Lessons Learned
+## Screenshots
 
-To be completed after reviewing the lab process.
+### Google Cybersecurity
+
+*Relevant course screenshots will be added here.*
+
+### TryHackMe
+
+*Selected screenshots from the hands-on lab will be added here.*
 
 ---
 
-## Final Reflection
+## Result
 
-To be completed after the lab documentation is finished.
+### What I Learned
+
+*This section will summarize what I learned about reviewing and interpreting basic logs.*
+
+### What I Found Most Useful
+
+*This section will briefly explain which log detail or analysis method was most useful to me.*
+
+### Next Step
+
+*The next lab will build on log analysis by reviewing and prioritizing alerts in a SIEM environment.*

@@ -1,80 +1,74 @@
-# 10 — Cloud Identity Basics
+# 10 - Cloud Identity Basics
 
-## Lab Status
-
-Documentation in progress.
-
----
-
-## Lab Goal
-
-The goal of this lab is to document basic Cloud and Identity Security concepts.
-
-This lab focuses on users, identities, authentication, access control, roles, and basic identity-related security thinking from a cybersecurity student perspective.
+| Information | Details |
+|---|---|
+| Difficulty | Beginner |
+| Category | Security Engineering |
+| Platform | TryHackMe |
+| Related Google Module | — |
 
 ---
 
-## Why This Lab Matters
+## Overview
 
-Cloud and Identity Security are important because many modern security risks are connected to accounts, access permissions, authentication methods, and identity-based attacks.
-
-This lab supports my long-term direction in:
-
-- Cloud & Identity Security
-- Identity and access management basics
-- Authentication awareness
-- Access control concepts
-- Security monitoring foundations
-- GRC-aware security thinking
+*This section will briefly introduce the lab and explain why identity and access management are important in cloud environments.*
 
 ---
 
-## Tools and Concepts Practiced
+## Learning Goal
 
-- Cloud identity basics
-- User accounts
-- Authentication
-- Authorization
-- Roles and permissions
-- MFA awareness
-- Identity-based risk
-- Access review thinking
+*This section will explain what I aimed to learn about authentication, authorization, identities, roles, and access control.*
 
 ---
 
-## Planned Evidence
+## What I Practiced
 
-This lab will include notes or screenshots related to:
-
-1. Reviewing basic identity concepts
-2. Understanding users and roles
-3. Reviewing authentication methods
-4. Understanding MFA importance
-5. Identifying access control concepts
-6. Writing identity-related security observations
-7. Connecting identity concepts to SOC or monitoring
-8. Final lab completion or summary evidence
+- Understanding cloud identities
+- Comparing authentication and authorization
+- Reviewing users, groups, and roles
+- Understanding basic access control
+- Applying the principle of least privilege
+- Recognizing risks caused by unnecessary permissions
 
 ---
 
-## Identity and Access Notes
+## Identity & Access Notes
 
-To be completed after reviewing the lab or learning material.
+*This section will include short observations about the identity and access concepts practiced in the lab.*
 
----
-
-## Security Observations
-
-To be completed after documenting identity-related risks or controls.
-
----
-
-## Common Mistakes / Lessons Learned
-
-To be completed after reviewing the lab process.
+- Identity type
+- Authentication method
+- Assigned role or permission
+- Resource access
+- Least privilege considerations
+- Possible access control risks
 
 ---
 
-## Final Reflection
+## Screenshots
 
-To be completed after the lab documentation is finished.
+### TryHackMe
+
+*Selected screenshots from the hands-on lab will be added here.*
+
+---
+
+## Result
+
+### What I Learned
+
+*This section will summarize what I learned about cloud identity and access management.*
+
+### What I Found Most Useful
+
+*This section will briefly explain which identity or access control concept was most useful to me.*
+
+### Next Step
+
+*The next lab will continue the access control theme by reviewing firewall rules and network traffic decisions.*
+
+---
+
+## Key Takeaway
+
+*This section will contain one short sentence describing the most important lesson from the lab.*

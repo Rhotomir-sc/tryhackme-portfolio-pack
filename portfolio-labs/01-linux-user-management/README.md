@@ -1,70 +1,69 @@
-# 01 — Linux User Management
+# 01 - Linux User Management
 
-## Lab Status
-
-Documentation in progress.
-
----
-
-## Lab Goal
-
-The goal of this lab is to practice basic Linux user management concepts.
-
-This lab focuses on understanding how users, groups, permissions, and account-related commands work in a Linux environment.
+| Information | Details |
+|---|---|
+| Difficulty | Beginner |
+| Category | Linux & Access Control |
+| Platform | TryHackMe |
+| Related Google Module | Linux & SQL |
 
 ---
 
-## Why This Lab Matters
+## Overview
 
-Linux fundamentals are important for cybersecurity because many security tasks involve reading system information, checking users, reviewing access, and understanding how permissions affect system behavior.
-
-This lab supports my learning path in:
-
-- Linux fundamentals
-- Command-line practice
-- Basic system administration
-- Access control awareness
-- SOC and security monitoring foundations
+*This section will briefly introduce the lab and explain why basic Linux user management is important.*
 
 ---
 
-## Tools and Concepts Practiced
+## Learning Goal
 
-- Linux terminal
-- User account commands
-- Group management basics
-- File and directory ownership
-- Basic access control concepts
+*This section will explain what I aimed to learn from the lab.*
 
 ---
 
-## Planned Evidence
+## What I Practiced
 
-This lab will include screenshots or outputs related to:
-
-1. Checking the current user
-2. Listing user or account-related information
-3. Creating or reviewing users
-4. Checking groups
-5. Reviewing ownership
-6. Using basic Linux commands
-7. Understanding permission-related output
-8. Final lab completion or summary evidence
+- Basic Linux user management
+- User accounts and user information
+- Common user-related commands
+- The role of user management in system security
 
 ---
 
-## Key Learning Notes
+## Google Cybersecurity Connection
 
-To be completed after adding notes and screenshots.
-
----
-
-## Common Mistakes / Lessons Learned
-
-To be completed after reviewing the lab process.
+*This section will briefly connect the lab with the related Linux & SQL module in my Google Cybersecurity portfolio.*
 
 ---
 
-## Final Reflection
+## Command Notes
 
-To be completed after the lab documentation is finished.
+*This section will include the most relevant commands used in the lab and short explanations of their purpose.*
+
+---
+
+## Screenshots
+
+### Google Cybersecurity
+
+*Relevant course screenshots will be added here.*
+
+### TryHackMe
+
+*Selected screenshots from the hands-on lab will be added here.*
+
+---
+
+## Result
+
+### What I Learned
+
+*This section will summarize the main thing I learned.*
+
+### What I Found Most Useful
+
+*This section will briefly explain which part of the lab was most useful to me.*
+
+### Next Step
+
+*This section will connect the lab with Linux permissions and least privilege.*

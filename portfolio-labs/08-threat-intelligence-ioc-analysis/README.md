@@ -1,86 +1,78 @@
-# 08 — Threat Intelligence IOC Analysis
+# 08 - Threat Intelligence IOC Analysis
 
-## Lab Status
-
-Documentation in progress.
-
----
-
-## Lab Goal
-
-The goal of this lab is to practice basic threat intelligence and IOC analysis.
-
-This lab focuses on identifying indicators of compromise, understanding why they matter, and documenting them in a clear student-level format.
+| Information | Details |
+|---|---|
+| Difficulty | Beginner |
+| Category | Threat, Incident & Phishing Analysis |
+| Platform | TryHackMe |
+| Related Google Module | Assets, Threats & Vulnerabilities |
 
 ---
 
-## Why This Lab Matters
+## Overview
 
-IOC analysis is important for cybersecurity because indicators such as IP addresses, domains, URLs, file hashes, and suspicious artifacts can help analysts detect, investigate, and understand possible threats.
-
-This lab supports my learning path in:
-
-- Threat intelligence basics
-- IOC identification
-- SOC investigation foundations
-- Security monitoring
-- Incident response documentation
-- Defensive analysis habits
+*This section will briefly introduce the lab and explain how indicators of compromise can support threat analysis and security investigations.*
 
 ---
 
-## Tools and Concepts Practiced
+## Learning Goal
 
-- Indicators of compromise
-- Suspicious IP addresses
-- Domains and URLs
-- File hashes
-- Basic reputation checking
-- Threat intelligence notes
-- IOC documentation
-- Defensive context
+*This section will explain what I aimed to learn about identifying, classifying, and reviewing common IOC types.*
 
 ---
 
-## Planned Evidence
+## What I Practiced
 
-This lab will include screenshots or outputs related to:
-
-1. Reviewing threat intelligence or scenario details
-2. Identifying possible IOCs
-3. Classifying IOC types
-4. Reviewing IP, domain, URL, or hash information
-5. Writing short IOC notes
-6. Adding defensive context
-7. Summarizing important findings
-8. Final lab completion or summary evidence
+- Identifying common IOC types
+- Reviewing IP addresses and domain names
+- Checking URLs and file hashes
+- Understanding the context of an indicator
+- Comparing indicators with available threat information
+- Recording short threat intelligence observations
 
 ---
 
-## IOC Summary
+## Google Cybersecurity Connection
 
-To be completed after reviewing the lab.
-
----
-
-## Defensive Context
-
-To be completed after identifying why the indicators matter.
+*This section will briefly connect the lab with the related Assets, Threats & Vulnerabilities module in my Google Cybersecurity portfolio.*
 
 ---
 
-## Key Findings
+## IOC Notes
 
-To be completed after documenting IOCs.
+*This section will include short observations about the indicators reviewed during the lab.*
+
+- IOC type
+- Indicator value
+- Why the indicator was relevant
+- Available context
+- Possible connection with suspicious activity
+- Whether further investigation was needed
 
 ---
 
-## Common Mistakes / Lessons Learned
+## Screenshots
 
-To be completed after reviewing the lab process.
+### Google Cybersecurity
+
+*Relevant course screenshots will be added here.*
+
+### TryHackMe
+
+*Selected screenshots from the hands-on lab will be added here.*
 
 ---
 
-## Final Reflection
+## Result
 
-To be completed after the lab documentation is finished.
+### What I Learned
+
+*This section will summarize what I learned about IOC analysis and threat intelligence.*
+
+### What I Found Most Useful
+
+*This section will briefly explain which IOC type or analysis method was most useful to me.*
+
+### Next Step
+
+*The next lab will continue the detection path by reviewing Windows event logs.*

@@ -1,79 +1,83 @@
-# 03 — Wireshark Traffic Analysis
+# 03 - Wireshark Traffic Analysis
 
-## Lab Status
-
-Documentation in progress.
-
----
-
-## Lab Goal
-
-The goal of this lab is to practice basic network traffic analysis with Wireshark.
-
-This lab focuses on understanding packets, protocols, source and destination addresses, ports, and basic traffic patterns from a cybersecurity student perspective.
+| Information | Details |
+|---|---|
+| Difficulty | Beginner |
+| Category | Network Discovery & Packet Analysis |
+| Platform | TryHackMe |
+| Related Google Module | Networks |
 
 ---
 
-## Why This Lab Matters
+## Overview
 
-Traffic analysis is important for cybersecurity because network activity can show communication patterns, suspicious connections, protocol usage, and possible indicators of malicious behavior.
-
-This lab supports my learning path in:
-
-- Networking fundamentals
-- Packet analysis
-- Wireshark practice
-- SOC and security monitoring foundations
-- Basic incident investigation skills
+*This section will briefly introduce the lab and explain why network traffic analysis is useful for understanding communication between systems.*
 
 ---
 
-## Tools and Concepts Practiced
+## Learning Goal
 
-- Wireshark
-- Packet capture review
-- Source and destination IP addresses
-- Protocol identification
-- TCP and UDP basics
-- DNS and HTTP traffic observation
-- Filtering traffic
-- Basic network observations
+*This section will explain what I aimed to learn about packet analysis, traffic filtering, and basic protocol observation with Wireshark.*
 
 ---
 
-## Planned Evidence
+## What I Practiced
 
-This lab will include screenshots or outputs related to:
-
-1. Opening a packet capture in Wireshark
-2. Identifying source and destination IP addresses
-3. Reviewing protocol types
-4. Applying a simple display filter
-5. Observing DNS or HTTP traffic
-6. Reviewing packet details
-7. Identifying useful network observations
-8. Final lab completion or summary evidence
+- Navigating the Wireshark interface
+- Reviewing captured network traffic
+- Applying basic display filters
+- Observing common network protocols
+- Inspecting packet details
+- Identifying meaningful traffic during basic analysis
 
 ---
 
-## Network Observations
+## Google Cybersecurity Connection
 
-To be completed after reviewing the packet capture.
-
----
-
-## Key Learning Notes
-
-To be completed after adding notes and screenshots.
+*This section will briefly connect the lab with the related Networks module in my Google Cybersecurity portfolio.*
 
 ---
 
-## Common Mistakes / Lessons Learned
+## Traffic Observations
 
-To be completed after reviewing the lab process.
+*This section will include short observations from the traffic reviewed during the lab.*
+
+- Protocols observed in the capture
+- Display filters used during the analysis
+- Source and destination information
+- Packet details that helped explain the communication
+- Traffic that appeared important or unusual
 
 ---
 
-## Final Reflection
+## Screenshots
 
-To be completed after the lab documentation is finished.
+### Google Cybersecurity
+
+*Relevant course screenshots will be added here.*
+
+### TryHackMe
+
+*Selected screenshots from the hands-on lab will be added here.*
+
+---
+
+## Result
+
+### What I Learned
+
+*This section will summarize what I learned about observing and filtering network traffic.*
+
+### What I Found Most Useful
+
+*This section will briefly explain which Wireshark feature or traffic observation was most useful to me.*
+
+### Next Step
+
+*The next lab will continue the network learning path with host discovery and basic enumeration using Nmap.*
+
+---
+
+## Key Takeaway
+
+*This section will contain one short sentence describing the most important lesson from the lab.*

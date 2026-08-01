@@ -1,86 +1,68 @@
-# 07 — Incident Response Journal
+# 07 - Incident Response Journal
 
-## Lab Status
-
-Documentation in progress.
-
----
-
-## Lab Goal
-
-The goal of this lab is to practice basic incident response documentation.
-
-This lab focuses on recording what happened, when it happened, what evidence was reviewed, and what actions or lessons should be documented.
+| Information | Details |
+|---|---|
+| Difficulty | Beginner |
+| Category | Threat, Incident & Phishing Analysis |
+| Platform | TryHackMe |
+| Related Google Module | — |
 
 ---
 
-## Why This Lab Matters
+## Overview
 
-Incident response documentation is important for cybersecurity because clear notes help analysts understand the incident timeline, affected systems, evidence, decisions, and follow-up actions.
-
-This lab supports my learning path in:
-
-- Incident response basics
-- SOC documentation
-- Timeline building
-- Evidence-based investigation
-- Security communication
-- GRC-aware security thinking
+*This section will briefly introduce the incident scenario and explain why clear documentation is important during incident response.*
 
 ---
 
-## Tools and Concepts Practiced
+## Learning Goal
 
-- Incident handler journal
-- Timeline notes
-- Event summary
-- Evidence review
-- Affected user or system notes
-- Basic impact awareness
-- Follow-up actions
-- Lessons learned
+*This section will explain what I aimed to learn about reviewing an incident, organizing findings, and recording the response process.*
 
 ---
 
-## Planned Evidence
+## What I Practiced
 
-This lab will include screenshots or outputs related to:
-
-1. Reviewing incident information
-2. Identifying important timestamps
-3. Writing a short incident summary
-4. Noting affected users, hosts, or systems if available
-5. Recording reviewed evidence
-6. Creating a basic timeline
-7. Writing follow-up actions or lessons learned
-8. Final lab completion or summary evidence
+- Reviewing a basic security incident
+- Identifying the main event and affected assets
+- Recording initial findings
+- Organizing investigation notes
+- Summarizing the response process
+- Writing a clear incident conclusion
 
 ---
 
-## Incident Summary
+## Investigation Summary
 
-To be completed after reviewing the lab scenario.
+*This section will briefly summarize the incident without turning the README into a walkthrough.*
 
----
-
-## Timeline Notes
-
-To be completed after identifying important events.
-
----
-
-## Evidence Reviewed
-
-To be completed after reviewing screenshots, logs, alerts, or scenario details.
+- What happened
+- Which asset or user was affected
+- Important evidence
+- Initial assessment
+- Actions considered or taken
+- Final incident status
 
 ---
 
-## Lessons Learned
+## Screenshots
 
-To be completed after finishing the lab documentation.
+### TryHackMe
+
+*Selected screenshots from the hands-on lab will be added here.*
 
 ---
 
-## Final Reflection
+## Result
 
-To be completed after the lab documentation is finished.
+### What I Learned
+
+*This section will summarize what I learned about incident review and documentation.*
+
+### What I Found Most Useful
+
+*This section will briefly explain which part of the investigation or documentation process was most useful to me.*
+
+### Next Step
+
+*The next lab will focus on identifying and reviewing indicators of compromise.*

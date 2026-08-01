@@ -1,80 +1,74 @@
-# 11 — Firewall Rule Audit
+# 11 - Firewall Rule Audit
 
-## Lab Status
-
-Documentation in progress.
-
----
-
-## Lab Goal
-
-The goal of this lab is to practice basic firewall rule review and security reasoning.
-
-This lab focuses on understanding firewall rules, source and destination information, ports, protocols, allow or deny actions, and basic rule review from a cybersecurity student perspective.
+| Information | Details |
+|---|---|
+| Difficulty | Beginner |
+| Category | Security Engineering |
+| Platform | TryHackMe |
+| Related Google Module | — |
 
 ---
 
-## Why This Lab Matters
+## Overview
 
-Firewall rules are important for cybersecurity because poorly configured rules can allow unnecessary access, expose services, or increase risk.
-
-This lab supports my learning path in:
-
-- Network security basics
-- Firewall rule review
-- Access control awareness
-- Defensive security thinking
-- GRC-aware security documentation
-- Security monitoring foundations
+*This section will briefly introduce the lab and explain why firewall rules should be reviewed for unnecessary or risky access.*
 
 ---
 
-## Tools and Concepts Practiced
+## Learning Goal
 
-- Firewall rules
-- Source and destination addresses
-- Ports
-- Protocols
-- Allow and deny rules
-- Rule review
-- Least privilege thinking
-- Basic risk notes
+*This section will explain what I aimed to learn about reading firewall rules, understanding traffic decisions, and identifying basic configuration risks.*
 
 ---
 
-## Planned Evidence
+## What I Practiced
 
-This lab will include screenshots or outputs related to:
-
-1. Reviewing firewall rule structure
-2. Identifying source and destination fields
-3. Reviewing ports and protocols
-4. Understanding allow or deny actions
-5. Noting overly broad rules if available
-6. Writing basic risk observations
-7. Suggesting simple review notes
-8. Final lab completion or summary evidence
+- Reading basic firewall rules
+- Identifying source and destination information
+- Reviewing ports and protocols
+- Understanding allow and deny decisions
+- Recognizing overly broad rules
+- Considering least privilege in network access
 
 ---
 
-## Firewall Review Notes
+## Rule Review Notes
 
-To be completed after reviewing firewall rules.
+*This section will include short observations about the rules reviewed during the lab.*
 
----
-
-## Basic Risk Observations
-
-To be completed after identifying important rule details.
-
----
-
-## Common Mistakes / Lessons Learned
-
-To be completed after reviewing the lab process.
+- Rule purpose
+- Source and destination
+- Port and protocol
+- Allowed or blocked action
+- Possible security concern
+- Suggested improvement
 
 ---
 
-## Final Reflection
+## Screenshots
 
-To be completed after the lab documentation is finished.
+### TryHackMe
+
+*Selected screenshots from the hands-on lab will be added here.*
+
+---
+
+## Result
+
+### What I Learned
+
+*This section will summarize what I learned about reviewing firewall rules.*
+
+### What I Found Most Useful
+
+*This section will briefly explain which rule review concept was most useful to me.*
+
+### Next Step
+
+*The next lab will focus on recognizing phishing indicators and reviewing suspicious email content.*
+
+---
+
+## Key Takeaway
+
+*This section will contain one short sentence describing the most important lesson from the lab.*

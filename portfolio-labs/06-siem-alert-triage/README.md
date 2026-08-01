@@ -1,80 +1,84 @@
-# 06 — SIEM Alert Triage
+# 06 - SIEM Alert Triage
 
-## Lab Status
-
-Documentation in progress.
-
----
-
-## Lab Goal
-
-The goal of this lab is to practice basic SIEM alert triage.
-
-This lab focuses on reviewing alerts, identifying important fields, understanding severity, and documenting basic triage decisions from a cybersecurity student perspective.
+| Information | Details |
+|---|---|
+| Difficulty | Beginner |
+| Category | SOC Logs & Alert Triage |
+| Platform | TryHackMe |
+| Related Google Module | Detection & Response |
 
 ---
 
-## Why This Lab Matters
+## Overview
 
-SIEM alert triage is important for cybersecurity because analysts need to review alerts, decide what matters, and document why an event may require further investigation.
-
-This lab supports my learning path in:
-
-- SOC Level 1 foundations
-- Alert triage
-- Log analysis
-- Security monitoring
-- Incident investigation basics
-- Documentation habits
+*This section will briefly introduce the lab and explain why alert triage is an important part of security monitoring.*
 
 ---
 
-## Tools and Concepts Practiced
+## Learning Goal
 
-- SIEM alerts
-- Alert severity
-- Source and destination information
-- User or host information
-- Event timestamps
-- Basic investigation notes
-- False positive awareness
-- Triage decision-making
+*This section will explain what I aimed to learn about reviewing alerts, identifying useful evidence, and deciding which events require further investigation.*
 
 ---
 
-## Planned Evidence
+## What I Practiced
 
-This lab will include screenshots or outputs related to:
-
-1. Opening or reviewing an alert
-2. Identifying alert name or rule information
-3. Checking severity or priority
-4. Reviewing source and destination details
-5. Checking related user or host information
-6. Writing basic triage notes
-7. Deciding whether the alert needs further investigation
-8. Final lab completion or summary evidence
+- Reviewing SIEM alerts
+- Checking alert severity and context
+- Identifying related users, hosts, and events
+- Comparing alert details with available evidence
+- Performing an initial investigation
+- Prioritizing alerts for further review
 
 ---
 
-## Triage Summary
+## Google Cybersecurity Connection
 
-To be completed after reviewing the alert.
-
----
-
-## Key Findings
-
-To be completed after identifying important alert details.
+*This section will briefly connect the lab with the related Detection & Response module in my Google Cybersecurity portfolio.*
 
 ---
 
-## Common Mistakes / Lessons Learned
+## Alert Triage Notes
 
-To be completed after reviewing the lab process.
+*This section will include short observations from the alerts reviewed during the lab.*
+
+- Alert name and severity
+- Affected user or system
+- Related event information
+- Initial signs of suspicious activity
+- Reason for escalating or closing an alert
+- Evidence that supported the decision
 
 ---
 
-## Final Reflection
+## Screenshots
 
-To be completed after the lab documentation is finished.
+### Google Cybersecurity
+
+*Relevant course screenshots will be added here.*
+
+### TryHackMe
+
+*Selected screenshots from the hands-on lab will be added here.*
+
+---
+
+## Result
+
+### What I Learned
+
+*This section will summarize what I learned about reviewing and prioritizing SIEM alerts.*
+
+### What I Found Most Useful
+
+*This section will briefly explain which part of the triage process was most useful to me.*
+
+### Next Step
+
+*The next lab will focus on documenting and reviewing a basic incident response scenario.*
+
+---
+
+## Key Takeaway
+
+*This section will contain one short sentence describing the most important lesson from the lab.*

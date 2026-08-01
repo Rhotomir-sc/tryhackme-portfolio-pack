@@ -1,136 +1,81 @@
-# TryHackMe Portfolio Pack 🛡️
+# TryHackMe Portfolio Pack
 
-This repository contains my hands-on cybersecurity lab documentation from TryHackMe.
+## About This Repository
 
-I use this repository to document selected labs, learning notes, screenshots, and reflections in a structured way.
-
-The goal is not only to show completed rooms, but to explain what I practiced and how each lab supports my cybersecurity learning path.
+This repository documents my hands-on cybersecurity learning through TryHackMe labs. Rather than simply listing completed rooms, I use it to reinforce what I learn through practical exercises, document my progress, and gradually build a personal portfolio that reflects my learning journey.
 
 ---
 
-## Purpose of This Repository
+## Learning Focus
 
-This repository answers one main question:
+My current learning focuses on Linux fundamentals, network analysis, security monitoring, and defensive cybersecurity practices. In the long term, I aim to continue developing my knowledge in Cloud and Identity Security.
 
-> What did I practice hands-on, and how did I document it?
+I chose this learning path because I believe identity management and access control are among the fundamental building blocks of modern cybersecurity. Alongside my main focus, I also study offensive security techniques at a foundational level to strengthen my defensive perspective.
 
-This repository is designed to show:
-
-- Hands-on cybersecurity lab practice
-- Linux and command-line fundamentals
-- Networking and packet analysis
-- Nmap and basic enumeration practice
-- Log analysis and security monitoring
-- SOC Level 1 learning foundations
-- Incident response and documentation habits
-- Cloud & Identity Security direction through selected security topics
+As I continue learning, I also plan to explore emerging areas such as AI Security that support my primary learning goals while continuing to develop my knowledge in topics that interest me.
 
 ---
 
-## Portfolio Lab Roadmap
+## Portfolio Labs
 
-This repository is organized around a student-level 13-lab roadmap.
+The labs are grouped by topic to make my learning path easier to follow, while the folders are kept in a simple numbered order.
 
-| No | Lab | Focus Area |
-|---|---|---|
-| 01 | `linux-user-management` | Linux fundamentals |
-| 02 | `linux-permissions` | Linux access control |
-| 03 | `wireshark-traffic-analysis` | Packet analysis |
-| 04 | `nmap-host-discovery` | Network discovery |
-| 05 | `log-analysis-basics` | Log analysis |
-| 06 | `siem-alert-triage` | SOC triage |
-| 07 | `incident-response-journal` | Incident documentation |
-| 08 | `threat-intelligence-ioc-analysis` | IOC analysis |
-| 09 | `windows-event-log-analysis` | Windows event logs |
-| 10 | `cloud-identity-basics` | Cloud & identity fundamentals |
-| 11 | `firewall-rule-audit` | Firewall rule review |
-| 12 | `phishing-detection` | Phishing analysis |
-| 13 | `security-monitoring-web-traffic` | Web traffic monitoring |
+### Linux & Access Control
+
+- 01 – Linux User Management
+- 02 – Linux Permissions and Least Privilege
+
+### Network Discovery & Packet Analysis
+
+- 03 – Wireshark Traffic Analysis
+- 04 – Nmap Host Discovery
+
+### SOC Logs & Alert Triage
+
+- 05 – Log Analysis Basics
+- 06 – SIEM Alert Triage
+- 09 – Windows Event Log Analysis
+
+### Threat, Incident & Phishing Analysis
+
+- 07 – Incident Response Journal
+- 08 – Threat Intelligence IOC Analysis
+- 12 – Phishing Detection
+
+### Security Engineering
+
+- 10 – Cloud Identity Basics
+- 11 – Firewall Rule Audit
+- 13 – Security Monitoring Web Traffic
 
 ---
 
-## Repository Structure
+## Google Cybersecurity Connection
+
+Some labs in this repository are connected to topics covered in the Google Cybersecurity Certificate. When a lab is related to a Google module, a short **Google Cybersecurity Connection** section explains how I reinforced the concepts introduced in the course through hands-on practice.
+
+---
+
+## CTF Practice
+
+This section contains CTF challenges that I work on to reinforce the concepts I learn throughout my studies. The goal is not to publish write-ups, but to improve my problem-solving skills and strengthen my practical cybersecurity experience.
+
+---
+
+## Learning Approach
+
+I usually learn a new concept first, reinforce it through hands-on practice, and then document what I learned. This approach helps me keep my learning organized while gradually building practical experience.
 
 ```text
-tryhackme-portfolio-pack/
-├── portfolio-labs/
-├── ctf-practice/
-├── learning-journal/
-├── README.md
-└── LICENSE
+Learn
+   ↓
+Practice
+   ↓
+Document
+   ↓
+Improve
 ```
 
-### `portfolio-labs/`
-
-Main lab documentation area.
-
-Each lab should include:
-
-```text
-lab-name/
-├── README.md
-├── notes.md
-└── screenshots/
-```
-
-### `ctf-practice/`
-
-Small CTF-style practice notes and beginner-friendly problem-solving records.
-
-### `learning-journal/`
-
-Short reflections about what I learned, what confused me, and what I improved during lab practice.
-
 ---
 
-## Lab Documentation Standard
-
-Each portfolio lab should include:
-
-- Lab goal
-- Tools or concepts practiced
-- Step-by-step summary
-- Key observations
-- Screenshots or outputs
-- Common mistakes or lessons learned
-- Short final reflection
-
-The focus is on clear student-level documentation, not advanced professional claims.
-
----
-
-## Portfolio Connection
-
-This repository is one part of my cybersecurity portfolio.
-
-| Portfolio Area | Repository |
-|---|---|
-| Personal learning profile and roadmap | `zdll` |
-| Academic evidence and coursework | `semester-evidence-packs` |
-| Cybersecurity fundamentals | `google-cybersecurity-m1-m8-portfolio-pack` |
-| Hands-on lab practice | `tryhackme-portfolio-pack` |
-| Combined student-level security project | `security-capstone` |
-| Mistakes, corrections, and lessons learned | `security-mistake-library` |
-
----
-
-## What This Repository Shows
-
-This repository is not meant to claim professional SOC or penetration testing experience.
-
-It is meant to show that I can:
-
-- Practice cybersecurity topics hands-on
-- Document labs clearly
-- Connect Linux, networking, logs, and monitoring concepts
-- Build a structured lab portfolio over time
-- Reflect on mistakes and improve gradually
-- Support my long-term Cloud & Identity Security direction with practical foundations
-
----
-
-## Current Status
-
-This repository is part of my active cybersecurity learning portfolio.
-
-The lab roadmap will continue to be updated as I complete, document, and organize TryHackMe rooms into portfolio-ready lab writeups.
+This repository is part of my ongoing learning journey. As I complete new labs, gain more experience, and continue improving my skills, I will keep updating and expanding this portfolio.

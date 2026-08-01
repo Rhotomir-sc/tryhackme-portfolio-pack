@@ -1,86 +1,78 @@
-# 04 — Nmap Host Discovery
+# 04 - Nmap Host Discovery
 
-## Lab Status
-
-Documentation in progress.
-
----
-
-## Lab Goal
-
-The goal of this lab is to practice basic host discovery and network scanning with Nmap.
-
-This lab focuses on identifying active hosts, understanding scan output, and documenting basic enumeration results from a cybersecurity student perspective.
+| Information | Details |
+|---|---|
+| Difficulty | Beginner |
+| Category | Network Discovery & Packet Analysis |
+| Platform | TryHackMe |
+| Related Google Module | Networks |
 
 ---
 
-## Why This Lab Matters
+## Overview
 
-Host discovery is important for cybersecurity because defenders and analysts need to understand what systems exist in a network before reviewing risks, logs, alerts, or possible exposure.
-
-This lab supports my learning path in:
-
-- Networking fundamentals
-- Nmap basics
-- Host discovery
-- Basic enumeration
-- SOC and security monitoring foundations
-- Defensive network awareness
+*This section will briefly introduce the lab and explain why host discovery and basic service identification are useful during a security review.*
 
 ---
 
-## Tools and Concepts Practiced
+## Learning Goal
 
-- Nmap
-- Host discovery
-- IP addresses
-- Network ranges
-- Basic scan output
-- Open port awareness
-- Enumeration notes
-- Defensive context
+*This section will explain what I aimed to learn about identifying active hosts, open ports, and visible network services with Nmap.*
 
 ---
 
-## Planned Evidence
+## What I Practiced
 
-This lab will include screenshots or outputs related to:
+- Basic host discovery
+- Port scanning
+- Identifying open ports
+- Reviewing service information
+- Recording initial enumeration findings
+- Considering scan results from a defensive perspective
 
-1. Running a basic Nmap scan
-2. Identifying active hosts
-3. Reviewing scan output
-4. Observing discovered services or ports if available
-5. Comparing scan results
-6. Writing enumeration notes
-7. Adding defensive context
-8. Final lab completion or summary evidence
+---
+
+## Google Cybersecurity Connection
+
+*This section will briefly connect the lab with the related Networks module in my Google Cybersecurity portfolio.*
 
 ---
 
 ## Enumeration Notes
 
-To be completed after reviewing scan results.
+*This section will include short observations from the Nmap scans performed during the lab.*
+
+- Scan type used
+- Active host information
+- Open ports identified
+- Services observed
+- Findings that may require further review
+- Defensive meaning of exposed services
 
 ---
 
-## Defensive Context
+## Screenshots
 
-To be completed after documenting what the scan results could mean from a defender perspective.
+### Google Cybersecurity
 
----
+*Relevant course screenshots will be added here.*
 
-## Key Learning Notes
+### TryHackMe
 
-To be completed after adding notes and screenshots.
-
----
-
-## Common Mistakes / Lessons Learned
-
-To be completed after reviewing the lab process.
+*Selected screenshots from the hands-on lab will be added here.*
 
 ---
 
-## Final Reflection
+## Result
 
-To be completed after the lab documentation is finished.
+### What I Learned
+
+*This section will summarize what I learned about host discovery and basic enumeration.*
+
+### What I Found Most Useful
+
+*This section will briefly explain which scan result or Nmap feature was most useful to me.*
+
+### Next Step
+
+*The next lab will move from network discovery to reviewing system and security logs.*

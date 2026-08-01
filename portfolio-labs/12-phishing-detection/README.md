@@ -1,80 +1,86 @@
-# 12 — Phishing Detection
+# 12 - Phishing Detection
 
-## Lab Status
-
-Documentation in progress.
-
----
-
-## Lab Goal
-
-The goal of this lab is to practice basic phishing detection and analysis.
-
-This lab focuses on reviewing suspicious emails, identifying phishing indicators, understanding social engineering techniques, and documenting findings from a cybersecurity student perspective.
+| Information | Details |
+|---|---|
+| Difficulty | Beginner |
+| Category | Threat, Incident & Phishing Analysis |
+| Platform | TryHackMe |
+| Related Google Module | Assets, Threats & Vulnerabilities |
 
 ---
 
-## Why This Lab Matters
+## Overview
 
-Phishing detection is important for cybersecurity because phishing is a common attack method used to steal credentials, deliver malware, or trick users into unsafe actions.
-
-This lab supports my learning path in:
-
-- Phishing analysis
-- Social engineering awareness
-- Email security basics
-- IOC identification
-- SOC Level 1 foundations
-- Incident documentation
+*This section will briefly introduce the lab and explain why phishing detection is important for identifying social engineering attempts.*
 
 ---
 
-## Tools and Concepts Practiced
+## Learning Goal
 
-- Phishing indicators
-- Sender review
-- Suspicious links
-- Email headers basics
-- Urgency and social engineering
-- Attachments
-- IOC notes
-- Basic reporting
+*This section will explain what I aimed to learn about suspicious senders, links, domains, attachments, and message content.*
 
 ---
 
-## Planned Evidence
+## What I Practiced
 
-This lab will include screenshots or outputs related to:
-
-1. Reviewing a suspicious email or scenario
-2. Identifying sender details
-3. Checking suspicious links or domains
-4. Reviewing attachments if available
-5. Noting social engineering techniques
-6. Listing phishing indicators
-7. Writing a short detection summary
-8. Final lab completion or summary evidence
+- Reviewing sender information
+- Checking suspicious links and domains
+- Recognizing social engineering language
+- Inspecting email headers at a basic level
+- Reviewing attachment details
+- Recording phishing indicators
 
 ---
 
-## Phishing Indicators
+## Google Cybersecurity Connection
 
-To be completed after reviewing the phishing scenario.
-
----
-
-## Basic Findings
-
-To be completed after documenting suspicious details.
+*This section will briefly connect the lab with the related Assets, Threats & Vulnerabilities module in my Google Cybersecurity portfolio.*
 
 ---
 
-## Common Mistakes / Lessons Learned
+## Indicators Checked
 
-To be completed after reviewing the lab process.
+*This section will include short observations about the phishing indicators reviewed during the lab.*
+
+- Sender address
+- Display name
+- URL and domain
+- Message language
+- Urgency or pressure
+- Attachment information
+- Header details
+- Final assessment
 
 ---
 
-## Final Reflection
+## Screenshots
 
-To be completed after the lab documentation is finished.
+### Google Cybersecurity
+
+*Relevant course screenshots will be added here.*
+
+### TryHackMe
+
+*Selected screenshots from the hands-on lab will be added here.*
+
+---
+
+## Result
+
+### What I Learned
+
+*This section will summarize what I learned about recognizing and reviewing phishing indicators.*
+
+### What I Found Most Useful
+
+*This section will briefly explain which phishing indicator or analysis method was most useful to me.*
+
+### Next Step
+
+*The final lab will focus on monitoring and interpreting web traffic from a security perspective.*
+
+---
+
+## Key Takeaway
+
+*This section will contain one short sentence describing the most important lesson from the lab.*

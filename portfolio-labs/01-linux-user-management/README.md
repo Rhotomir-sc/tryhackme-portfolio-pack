@@ -5,90 +5,99 @@
 | Difficulty | Beginner |
 | Category | Linux & Access Control |
 | Platform | TryHackMe |
-| Related Room | Linux Fundamentals Part 1 |
-| Related Google Module | Linux & SQL |
+| Related Google Module | Tools of the Trade: Linux and SQL — Module 3 |
 
 ---
 
 ## Overview
 
-In this lab, I reviewed basic Linux user identity and account information in a temporary TryHackMe environment. I focused on understanding how a Linux system identifies users, stores account details, assigns groups, and protects sensitive authentication files.
-
-The environment did not provide administrative access, so I worked with the existing account instead of creating or modifying users.
+This lab focuses on basic Linux user identity and account information. I reviewed how Linux identifies users, where account information is stored, and why separate user accounts are important for access control and system security.
 
 ---
 
 ## Learning Goal
 
-My goal was to understand the basic structure of a Linux user account and learn how user, group, home directory, and shell information can be reviewed from the terminal.
+My goal was to understand how Linux users are identified and managed at a basic level. I also wanted to see how user accounts, user IDs, groups, and protected account files work together in a Linux environment.
 
 ---
 
 ## What I Practiced
 
-- Checking the currently logged-in user
-- Reviewing UID, GID, and group membership
-- Reading account information from `/etc/passwd`
-- Reviewing user and group records with `getent`
-- Checking the home directory and login shell
-- Comparing the permissions of `/etc/passwd`, `/etc/group`, and `/etc/shadow`
+- Checking the current user and identity information
+- Reviewing user IDs and group details
+- Examining Linux user account files
+- Understanding how protected account information is stored
+- Creating a new user and assigning a primary group
+- Verifying user and group information
 
 ---
 
 ## Google Cybersecurity Connection
 
-I first reviewed basic Linux concepts in the Google Cybersecurity Certificate and then reinforced them through hands-on practice in this TryHackMe lab.
+The basic Linux user management concepts in this lab connect to the **Tools of the Trade: Linux and SQL** course in the Google Cybersecurity Certificate.
 
-**Related Module:** Linux & SQL
+In Module 3, I reviewed how Linux uses the Bash shell to authenticate and authorize users. I then practiced creating a user, assigning the account to a group, and verifying the result with Linux commands.
 
 ---
 
 ## Command Notes
 
-| Command | What I Used It For |
-|---|---|
-| `whoami` | Checked the currently logged-in user |
-| `id` | Reviewed the user's UID, GID, and group membership |
-| `groups` | Displayed the groups assigned to the current user |
-| `getent passwd` | Reviewed account information such as the home directory and login shell |
-| `getent group` | Checked the related group record |
-| `ls -l` | Compared ownership and permissions of account-related files |
-
-One detail I found important was that `/etc/passwd` and `/etc/group` were readable, while `/etc/shadow` had more restrictive permissions because it contains sensitive authentication information.
+- `whoami` helped me confirm which user was currently active.
+- `id` showed the user ID, primary group, and group membership information.
+- `/etc/passwd` provided basic information about local user accounts.
+- `/etc/shadow` showed why sensitive account information requires stronger protection.
+- `useradd` was used to create a new user account.
+- `usermod -g` was used to assign the user to a primary group.
 
 ---
 
 ## Screenshots
 
-### Current User and Identity
+### TryHackMe Practice
 
-This output shows the current username, UID, GID, group membership, home directory, and login shell.
+#### Current User and Identity
+
+I checked the current user and reviewed the identity information connected to the account.
 
 ![Current user and identity](screenshots/01-current-user-and-identity.png)
 
-### User Account Review
+#### User Account Review
 
-I reviewed account names from `/etc/passwd` and checked the UID, home directory, and shell information of standard users.
+I reviewed basic Linux user account information and how users are represented in the system.
 
 ![User account review](screenshots/02-user-account-review.png)
 
-### Account Files and Protection
+#### Account Files and Protection
 
-I compared the ownership and permissions of `/etc/passwd`, `/etc/group`, and `/etc/shadow`.
+I examined account-related files and noted why sensitive user information must be protected.
 
 ![Account files and protection](screenshots/03-account-files-and-protection.png)
 
-### User Environment Summary
+#### User Environment Summary
 
-This output provides a short summary of the active user's identity and environment.
+I reviewed the main user and environment details covered during the lab.
 
 ![User environment summary](screenshots/04-user-environment-summary.png)
 
-### Room Completion
+#### Room Completion
 
-The TryHackMe room was completed successfully.
+This screenshot shows the completion of the related TryHackMe room.
 
-![Linux Fundamentals Part 1 completed](screenshots/05-room-completed.png)
+![Room completed](screenshots/05-room-completed.png)
+
+### Google Cybersecurity Practice
+
+#### Linux and Bash Module
+
+This module introduced Linux commands, user authentication, authorization, and account management through the Bash shell.
+
+![Linux and Bash module](screenshots/google-01-linux-bash-module.png)
+
+#### User Management Activity
+
+I created a new user, assigned the account to the required primary group, and verified the result with the `id` command.
+
+![User management activity](screenshots/google-02-user-management-activity.png)
 
 ---
 
@@ -96,12 +105,12 @@ The TryHackMe room was completed successfully.
 
 ### What I Learned
 
-I learned how Linux connects a username with a UID, primary group, home directory, and login shell. I also understood why account information and authentication data are stored with different permission levels.
+I learned how Linux identifies users through user IDs and groups, and how basic account information is stored in the system. I also understood why separating users and protecting sensitive account files are important for system security.
 
 ### What I Found Most Useful
 
-The comparison between `/etc/passwd` and `/etc/shadow` was the most useful part for me because it showed how Linux separates general account information from sensitive authentication data.
+The most useful part was using the `id` command to verify user and group information after making an account change.
 
 ### Next Step
 
-The next lab will focus on Linux file permissions, ownership, and the principle of least privilege.
+The next lab continues with Linux permissions and least privilege to examine how access to files and directories can be controlled.

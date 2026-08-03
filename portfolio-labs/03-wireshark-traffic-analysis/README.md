@@ -5,60 +5,83 @@
 | Difficulty | Beginner |
 | Category | Network Discovery & Packet Analysis |
 | Platform | TryHackMe |
-| Related Google Module | Networks |
+| Related Google Module | Connect and Protect: Networks and Network Security — Module 1 |
 
 ---
 
 ## Overview
 
-*This section will briefly introduce the lab and explain why network traffic analysis is useful for understanding communication between systems.*
+This lab focuses on reviewing network traffic with Wireshark. I used display filters to separate FTP and HTTP packets, checked repeated login failures, and reviewed the overall protocol distribution in a packet capture.
+
+The aim was not to inspect every packet individually, but to identify useful patterns and understand how filtered traffic can support a basic security review.
 
 ---
 
 ## Learning Goal
 
-*This section will explain what I aimed to learn about packet analysis, traffic filtering, and basic protocol observation with Wireshark.*
+My goal was to become more comfortable with Wireshark and understand how display filters make packet analysis easier.
+
+I also wanted to practice recognizing normal protocol responses, repeated authentication failures, HTTP requests, and the general structure of captured network traffic.
 
 ---
 
 ## What I Practiced
 
-- Navigating the Wireshark interface
-- Reviewing captured network traffic
-- Applying basic display filters
-- Observing common network protocols
-- Inspecting packet details
-- Identifying meaningful traffic during basic analysis
+- Opening and reviewing a packet capture
+- Applying Wireshark display filters
+- Filtering FTP response codes
+- Identifying repeated failed FTP login attempts
+- Reviewing source and destination IP addresses
+- Filtering HTTP requests
+- Examining protocol distribution with Protocol Hierarchy
+- Avoiding the exposure of passwords and other sensitive data
 
 ---
 
 ## Google Cybersecurity Connection
 
-*This section will briefly connect the lab with the related Networks module in my Google Cybersecurity portfolio.*
+The network concepts practiced in this lab connect to the **Connect and Protect: Networks and Network Security** course in the Google Cybersecurity Certificate.
+
+In Module 1, I reviewed network architecture, network communication, the TCP/IP model, and the OSI model. This TryHackMe lab gave me a practical opportunity to observe some of those concepts inside real packet capture data.
 
 ---
 
 ## Traffic Observations
 
-*This section will include short observations from the traffic reviewed during the lab.*
-
-- Protocols observed in the capture
-- Display filters used during the analysis
-- Source and destination information
-- Packet details that helped explain the communication
-- Traffic that appeared important or unusual
+- The filter `ftp.response.code == 220` isolated FTP service-ready responses.
+- The filter `ftp.response.code == 530` showed repeated failed login responses.
+- Several `530 Login incorrect` packets appeared between the same source and destination systems. I treated this as a pattern worth reviewing rather than immediately assuming it was malicious.
+- The `http.request` filter revealed an HTTP `GET` request to `/manager/html`.
+- Protocol Hierarchy showed that the capture contained 243 packets and that FTP represented a noticeable part of the traffic.
+- Filtering reduced the amount of visible traffic and made specific activity easier to review.
 
 ---
 
 ## Screenshots
 
-### Google Cybersecurity
+### Filtered FTP Service Traffic
 
-*Relevant course screenshots will be added here.*
+I filtered FTP response code `220` to review service-ready responses without exposing usernames or passwords.
 
-### TryHackMe
+![Filtered FTP service traffic](screenshots/01-filtered-ftp-service-traffic.png)
 
-*Selected screenshots from the hands-on lab will be added here.*
+### Failed FTP Login Analysis
+
+I used response code `530` to isolate repeated failed FTP login attempts.
+
+![Failed FTP login analysis](screenshots/02-failed-ftp-login-analysis.png)
+
+### HTTP Request Review
+
+I applied the `http.request` filter and identified an HTTP `GET` request between two systems.
+
+![HTTP request review](screenshots/03-http-request-review.png)
+
+### Protocol Hierarchy Summary
+
+I reviewed the overall packet and protocol distribution to understand the structure of the capture.
+
+![Protocol hierarchy summary](screenshots/04-protocol-hierarchy-summary.png)
 
 ---
 
@@ -66,18 +89,18 @@
 
 ### What I Learned
 
-*This section will summarize what I learned about observing and filtering network traffic.*
+I learned how Wireshark display filters can reduce a large packet capture into smaller groups of relevant traffic. I also became more comfortable reviewing protocol responses, IP communication, and repeated authentication failures.
 
 ### What I Found Most Useful
 
-*This section will briefly explain which Wireshark feature or traffic observation was most useful to me.*
+The most useful part was filtering FTP response codes. It allowed me to separate normal service responses from failed login activity without displaying sensitive credentials.
 
 ### Next Step
 
-*The next lab will continue the network learning path with host discovery and basic enumeration using Nmap.*
+The next lab will focus on Nmap host discovery and basic enumeration to understand how active systems and exposed network services can be identified.
 
 ---
 
 ## Key Takeaway
 
-*This section will contain one short sentence describing the most important lesson from the lab.*
+This lab helped me understand that packet analysis is not only about opening a capture file. The main value comes from filtering the traffic, recognizing patterns, and deciding which activity deserves closer review.

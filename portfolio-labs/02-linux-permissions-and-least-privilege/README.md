@@ -79,20 +79,6 @@ I removed the group read permission from `report.txt` and verified that only the
 
 ![Least privilege change](screenshots/03-least-privilege-change.png)
 
-### Google Cybersecurity Practice
-
-#### Linux Permissions Module
-
-This module covered file permissions, ownership, authorization, and Linux permission commands.
-
-![Linux permissions module](screenshots/google-01-permissions-module.png)
-
-#### Permission Management Activity
-
-I identified a file that allowed write access for other users and removed the unnecessary permission with `chmod o-w`.
-
-![Permission management activity](screenshots/google-02-permissions-activity.png)
-
 ---
 
 ## Result

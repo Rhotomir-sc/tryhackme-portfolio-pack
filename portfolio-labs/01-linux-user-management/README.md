@@ -85,20 +85,6 @@ This screenshot shows the completion of the related TryHackMe room.
 
 ![Room completed](screenshots/05-room-completed.png)
 
-### Google Cybersecurity Practice
-
-#### Linux and Bash Module
-
-This module introduced Linux commands, user authentication, authorization, and account management through the Bash shell.
-
-![Linux and Bash module](screenshots/google-01-linux-bash-module.png)
-
-#### User Management Activity
-
-I created a new user, assigned the account to the required primary group, and verified the result with the `id` command.
-
-![User management activity](screenshots/google-02-user-management-activity.png)
-
 ---
 
 ## Result

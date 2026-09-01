@@ -1,78 +1,49 @@
-# 08 - Threat Intelligence IOC Analysis
+# 08 - Threat Intelligence & IOC Analysis
 
 | Information | Details |
 |---|---|
 | Difficulty | Beginner |
-| Category | Threat, Incident & Phishing Analysis |
+| Category | Threat Intelligence & Malware Analysis |
 | Platform | TryHackMe |
-| Related Google Module | Assets, Threats & Vulnerabilities |
+| Practice Room | File and Hash Threat Intel |
+| Analysis Tool | TryDetectThis |
 
 ---
 
 ## Overview
 
-*This section will briefly introduce the lab and explain how indicators of compromise can support threat analysis and security investigations.*
+In this lab, I practiced analysing suspicious Windows files by using file hashes and threat intelligence data.
+
+Instead of relying only on filenames, I generated SHA-256 hashes for suspicious files and used them as indicators to search for additional intelligence.
+
+I analysed two different samples:
+
+- `payroll.pdf.exe`
+- `bl0gger.exe`
+
+The investigation included file reputation, malware classification, network indicators, sandbox behaviour and MITRE ATT&CK technique mapping.
 
 ---
 
 ## Learning Goal
 
-*This section will explain what I aimed to learn about identifying, classifying, and reviewing common IOC types.*
+My main goal was to understand how a file hash can be used as a starting IOC and how an investigation can move from one indicator to related technical information.
+
+I also wanted to practice separating direct evidence from assumptions while reviewing threat intelligence reports.
 
 ---
 
-## What I Practiced
+# Sample 1 - payroll.pdf.exe
 
-- Identifying common IOC types
-- Reviewing IP addresses and domain names
-- Checking URLs and file hashes
-- Understanding the context of an indicator
-- Comparing indicators with available threat information
-- Recording short threat intelligence observations
+## Initial Observation
 
----
+One of the files on the system was named:
 
-## Google Cybersecurity Connection
+`payroll.pdf.exe`
 
-*This section will briefly connect the lab with the related Assets, Threats & Vulnerabilities module in my Google Cybersecurity portfolio.*
+The double extension made the file suspicious because it could appear to a user as a payroll-related PDF while actually being a Windows executable.
 
----
+Before checking its reputation, I generated its SHA-256 hash locally.
 
-## IOC Notes
-
-*This section will include short observations about the indicators reviewed during the lab.*
-
-- IOC type
-- Indicator value
-- Why the indicator was relevant
-- Available context
-- Possible connection with suspicious activity
-- Whether further investigation was needed
-
----
-
-## Screenshots
-
-### Google Cybersecurity
-
-*Relevant course screenshots will be added here.*
-
-### TryHackMe
-
-*Selected screenshots from the hands-on lab will be added here.*
-
----
-
-## Result
-
-### What I Learned
-
-*This section will summarize what I learned about IOC analysis and threat intelligence.*
-
-### What I Found Most Useful
-
-*This section will briefly explain which IOC type or analysis method was most useful to me.*
-
-### Next Step
-
-*The next lab will continue the detection path by reviewing Windows event logs.*
+```text
+d202ed020ed8e36bd8a0f5b571a19d386c12abecb2a28c989d50bbf92c78f54e

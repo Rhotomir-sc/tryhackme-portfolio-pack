@@ -1,5 +1,14 @@
 # 07 - Incident Response Journal
 
+## At a glance
+
+**Question:** How can process, persistence, and file evidence guide a response?
+
+**Evidence:** [Existing evidence index](evidence-index.md).
+
+**Limit:** Removal steps need follow-up monitoring before claiming complete recovery.
+
+
 | Information           | Details                                   |
 | --------------------- | ----------------------------------------- |
 | Difficulty            | Beginner                                  |

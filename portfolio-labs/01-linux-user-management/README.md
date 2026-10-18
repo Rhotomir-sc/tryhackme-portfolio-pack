@@ -1,11 +1,20 @@
 # 01 - Linux User Management
 
+## At a glance
+
+**Question:** How are Linux identities, groups, and protected account files inspected?
+
+**Evidence:** [Existing evidence index](evidence-index.md).
+
+**Limit:** Account inspection does not by itself prove every privilege is necessary.
+
+
 | Information | Details |
 |---|---|
 | Difficulty | Beginner |
 | Category | Linux & Access Control |
 | Platform | TryHackMe |
-| Related Google Module | Tools of the Trade: Linux and SQL — Module 3 |
+| Related Google Module | Tools of the Trade: Linux and SQL — Course 4, internal Module 3 |
 
 ---
 
@@ -79,11 +88,6 @@ I reviewed the main user and environment details covered during the lab.
 
 ![User environment summary](screenshots/04-user-environment-summary.png)
 
-#### Room Completion
-
-This screenshot shows the completion of the related TryHackMe room.
-
-![Room completed](screenshots/05-room-completed.png)
 
 ---
 

@@ -1,5 +1,10 @@
 # TryHackMe Cybersecurity Portfolio
 
+## Review guide
+
+Each lab now has an evidence index and a short question/limitation summary. [Documentation standard](DOCUMENTATION.md). The CTF and learning-journal sections are currently templates awaiting entries.
+
+
 This repository documents my hands-on cybersecurity practice through TryHackMe labs.
 
 Instead of using the repository as a list of completed rooms, I use each lab to document a specific security task, the evidence I collected, the tools I used, and the conclusions I reached.
@@ -185,7 +190,7 @@ Screenshots are included only when they demonstrate useful technical evidence, s
 - authentication evidence
 - configuration findings
 
-Theory pages, room completion screens, and repetitive screenshots are intentionally excluded.
+Featured evidence focuses on technical observations. Older completion images remain in the file history/asset folders but are not featured as technical proof.
 
 ---
 

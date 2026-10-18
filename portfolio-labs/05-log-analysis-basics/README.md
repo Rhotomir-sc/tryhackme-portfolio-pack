@@ -1,5 +1,14 @@
 # 05 - Log Analysis Basics
 
+## At a glance
+
+**Question:** Which web-log records deserve closer investigation?
+
+**Evidence:** [Existing evidence index](evidence-index.md).
+
+**Limit:** An HTTP 200 response does not establish successful application authentication.
+
+
 | Information | Details |
 |---|---|
 | Difficulty | Beginner |

@@ -1,5 +1,20 @@
 # 10 - Cloud Identity Basics
 
+[Timeline verification follow-up](timeline-review.md) separates source correlation from proof of chronological order. The follow-up query has not been rerun against the training dataset.
+
+
+[Command/query reference](command-reference.md).
+
+
+## At a glance
+
+**Question:** What connects failed and successful cloud sign-ins?
+
+**Evidence:** [Existing evidence index](evidence-index.md).
+
+**Limit:** Source correlation alone does not prove event order, MFA completion, or compromise.
+
+
 | Information | Details |
 |---|---|
 | Difficulty | Beginner |

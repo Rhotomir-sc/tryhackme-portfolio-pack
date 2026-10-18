@@ -1,5 +1,8 @@
 # CTF Practice
 
+**Status:** this section contains guidance only; no dated exercise entries have been added. [Blank entry template](entry-template.md).
+
+
 This folder contains beginner-friendly CTF-style practice notes.
 
 The goal of this section is not to present advanced offensive security work.  
@@ -44,3 +47,4 @@ The main portfolio evidence is kept in:
 
 ```text
 portfolio-labs/
+```

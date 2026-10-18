@@ -1,11 +1,20 @@
 # 04 - Nmap Host Discovery
 
+## At a glance
+
+**Question:** How do discovery methods change which hosts respond?
+
+**Evidence:** [Existing evidence index](evidence-index.md).
+
+**Limit:** No discovery response does not establish that a host is offline.
+
+
 | Information | Details |
 |---|---|
 | Difficulty | Beginner |
 | Category | Network Discovery & Packet Analysis |
 | Platform | TryHackMe |
-| Related Google Module | Connect and Protect: Networks and Network Security — Module 1 |
+| Related Google Module | Connect and Protect: Networks and Network Security — Course 3, internal Module 1 |
 
 ---
 

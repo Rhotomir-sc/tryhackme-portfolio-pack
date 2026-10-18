@@ -1,5 +1,14 @@
 # 12 - Phishing Detection
 
+## At a glance
+
+**Question:** Can an authenticated email still impersonate a brand?
+
+**Evidence:** [Existing evidence index](evidence-index.md).
+
+**Limit:** Authentication results apply to the authenticated domain, not automatically to the displayed brand.
+
+
 | Information | Details |
 |---|---|
 | Difficulty | Beginner |

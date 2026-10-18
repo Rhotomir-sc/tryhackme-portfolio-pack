@@ -1,5 +1,17 @@
 # 11 - Firewall Rule Audit
 
+[Command/query reference](command-reference.md).
+
+
+## At a glance
+
+**Question:** Which firewall settings broaden management access?
+
+**Evidence:** [Existing evidence index](evidence-index.md).
+
+**Limit:** Rule configuration alone does not prove end-to-end network reachability.
+
+
 | Information | Details |
 |---|---|
 | Difficulty | Beginner |

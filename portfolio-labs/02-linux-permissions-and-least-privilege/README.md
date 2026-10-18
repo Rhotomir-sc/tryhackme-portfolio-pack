@@ -1,11 +1,20 @@
 # 02 - Linux Permissions and Least Privilege
 
+## At a glance
+
+**Question:** Which file permissions are unnecessary, and what changes after removing them?
+
+**Evidence:** [Existing evidence index](evidence-index.md).
+
+**Limit:** A permission change must be interpreted in the context of the file and its intended users.
+
+
 | Information | Details |
 |---|---|
 | Difficulty | Beginner |
 | Category | Linux & Access Control |
 | Platform | TryHackMe |
-| Related Google Module | Tools of the Trade: Linux and SQL — Module 3 |
+| Related Google Module | Tools of the Trade: Linux and SQL — Course 4, internal Module 3 |
 
 ---
 
@@ -61,11 +70,6 @@ I used `ls -l` to review the current permissions and `chmod` to remove access th
 
 ### TryHackMe Practice
 
-#### Room Overview and Completion
-
-I completed the Linux Fundamentals Part 2 room, which includes file access, users, groups, and Linux permission concepts.
-
-![Room overview and completion](screenshots/01-room-overview-and-completion.png)
 
 #### Permission Review
 

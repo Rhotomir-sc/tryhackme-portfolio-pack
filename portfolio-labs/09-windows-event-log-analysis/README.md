@@ -1,5 +1,17 @@
 # 09 - Windows Event Log Analysis
 
+[Command/query reference](command-reference.md).
+
+
+## At a glance
+
+**Question:** How can Windows and Sysmon events be correlated?
+
+**Evidence:** [Existing evidence index](evidence-index.md).
+
+**Limit:** The documented mini-scenarios must not be merged into one unsupported incident timeline.
+
+
 | Information | Details |
 |---|---|
 | Difficulty | Beginner |

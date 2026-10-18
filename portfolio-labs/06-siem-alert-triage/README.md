@@ -1,5 +1,14 @@
 # 06 - SIEM Alert Triage
 
+## At a glance
+
+**Question:** What evidence supports suspicious scheduled-task creation?
+
+**Evidence:** [Existing evidence index](evidence-index.md).
+
+**Limit:** Task creation does not independently establish that the downloaded executable ran.
+
+
 | Information           | Details                                 |
 | --------------------- | --------------------------------------- |
 | Difficulty            | Beginner                                |

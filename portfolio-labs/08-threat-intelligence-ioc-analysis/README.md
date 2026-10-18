@@ -1,5 +1,14 @@
 # 08 - Threat Intelligence & IOC Analysis
 
+## At a glance
+
+**Question:** How do file hashes and sandbox reports enrich an investigation?
+
+**Evidence:** [Existing evidence index](evidence-index.md).
+
+**Limit:** Sandbox-reported behavior is distinct from independently verified behavior.
+
+
 | Information | Details |
 |---|---|
 | Difficulty | Beginner |

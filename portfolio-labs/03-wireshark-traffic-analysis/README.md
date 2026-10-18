@@ -1,11 +1,20 @@
 # 03 - Wireshark Traffic Analysis
 
+## At a glance
+
+**Question:** Which FTP and HTTP observations deserve follow-up?
+
+**Evidence:** [Existing evidence index](evidence-index.md).
+
+**Limit:** Failed responses and HTTP requests are observations, not automatic proof of compromise.
+
+
 | Information | Details |
 |---|---|
 | Difficulty | Beginner |
 | Category | Network Discovery & Packet Analysis |
 | Platform | TryHackMe |
-| Related Google Module | Connect and Protect: Networks and Network Security — Module 1 |
+| Related Google Module | Connect and Protect: Networks and Network Security — Course 3, internal Module 1 |
 
 ---
 

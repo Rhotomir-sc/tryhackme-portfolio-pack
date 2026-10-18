@@ -1,5 +1,8 @@
 # Learning Journal
 
+**Status:** this section contains guidance only; no dated exercise entries have been added. [Blank entry template](entry-template.md).
+
+
 This folder contains short reflections from my TryHackMe learning process.
 
 The goal of this section is to document what I learned, what confused me, what I improved, and how my understanding changed during hands-on cybersecurity practice.
@@ -44,3 +47,4 @@ Formal lab documentation is kept in:
 
 ```text
 portfolio-labs/
+```

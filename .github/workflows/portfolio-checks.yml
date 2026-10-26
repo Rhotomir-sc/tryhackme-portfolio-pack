@@ -18,3 +18,5 @@ jobs:
           python-version: '3.12'
       - name: Check documentation
         run: python tools/check_links.py
+      - name: Test cloud sign-in timeline validator
+        run: python -m unittest discover -s portfolio-labs/10-cloud-identity-basics/tests -v

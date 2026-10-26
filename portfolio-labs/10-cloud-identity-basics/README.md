@@ -1,5 +1,7 @@
 # 10 - Cloud Identity Basics
 
+**Evidence update:** the original searches establish a user/IP correlation, but not the order of failure and success events. The reported 26 events are *nonzero error-code events aggregated by user*, not 26 confirmed incorrect passwords from one IP. The [timeline validation guide and tested offline tool](timeline-review.md) document what still needs to be checked against the original training data.
+
 [Timeline verification follow-up](timeline-review.md) separates source correlation from proof of chronological order. The follow-up query has not been rerun against the training dataset.
 
 
@@ -29,13 +31,13 @@
 
 In this lab, I investigated suspicious Microsoft Entra ID authentication activity using sign-in logs collected in Splunk.
 
-The scenario contained multiple failed authentication attempts followed by successful sign-ins from the same source IP.
+The scenario investigation identified nonzero error-code sign-in records and successful sign-in records associated with the same source IP. The original aggregated output did **not** establish chronological order.
 
 I used Entra ID sign-in telemetry to identify:
 
 - the targeted user
 - the source IP
-- failed authentication volume
+- nonzero-code event totals and the need to distinguish credential errors from other interruptions
 - authentication error codes
 - successful sign-ins
 - accessed Microsoft 365 applications
@@ -82,9 +84,9 @@ These fields can help SOC analysts identify brute-force activity, suspicious suc
 
 ---
 
-# Investigation 1 - Failed Authentication Attempts
+# Investigation 1 - Nonzero Error-Code Events
 
-I started by searching all failed Entra ID sign-in events.
+I started by searching nonzero-code Entra ID sign-in events. This includes some events that are **not incorrect-password attempts**, so each error code needs separate interpretation.
 
 ```spl
 index="scenario" sourcetype="azure:aad:signin" "status.errorCode"!=0
@@ -106,8 +108,8 @@ Source IP:
 Application:
 OfficeHome
 
-Failed events:
-26
+Nonzero-code events in the user-level aggregate:
+26 (not verified per IP)
 ```
 
 The authentication activity also contained error codes:
@@ -117,7 +119,7 @@ The authentication activity also contained error codes:
 50140
 ```
 
-The repeated failures from the same source against the same identity made the activity worth further investigation.
+The user-level count and listed source IP made the activity worth further investigation. The original aggregation did not show how many code-50126 credential failures came from that IP.
 
 ![Entra failed sign-ins summary](screenshots/01-entra-failed-signins-summary.png)
 
@@ -125,7 +127,7 @@ The repeated failures from the same source against the same identity made the ac
 
 # Investigation 2 - Successful Sign-ins From the Same IP
 
-After identifying the suspicious source IP, I searched for successful sign-ins originating from the same address.
+After identifying a source IP of interest, I searched separately for successful sign-ins from that address.
 
 ```spl
 index=scenario sourcetype="azure:aad:signin"
@@ -144,7 +146,7 @@ allan.smith@finegalo.thm
 
 from the same IPv6 address.
 
-The source successfully accessed:
+The successful sign-in results listed applications:
 
 ```text
 My Profile
@@ -153,9 +155,9 @@ OfficeHome
 One Outlook Web
 ```
 
-This connected the earlier failed authentication activity with later successful cloud access.
+This linked the two result sets by source IP and identity. Because this query aggregated values without event timestamps, it **did not prove** that the successful sign-ins came after the credential failures.
 
-![Successful sign-ins from attacker IP](screenshots/02-successful-signins-from-attacker-ip.png)
+![Successful sign-ins from reviewed IP](screenshots/02-successful-signins-from-attacker-ip.png)
 
 ---
 
@@ -196,7 +198,7 @@ One Outlook Web
 
 ![Interactive browser sign-ins](screenshots/03-interactive-browser-signins.png)
 
-The events therefore showed successful interactive browser sessions from the same source IP that generated the earlier failed authentication attempts.
+These successful interactive browser sign-ins used an IP that was also listed among nonzero-code events. The original searches did not establish event order or whether the 26 nonzero-code events all originated from this IP.
 
 `conditionalAccessStatus=success` indicates that the Conditional Access evaluation succeeded for those sign-ins.
 
@@ -207,7 +209,7 @@ I did not interpret this field alone as proof that MFA was completed because the
 # Investigation Flow
 
 ```text
-26 failed authentication attempts
+26 nonzero-code events (aggregated by user)
             ↓
 Target identity identified
             ↓
@@ -217,7 +219,7 @@ Source IPv6 identified
             ↓
 2804:2488:7082:a4c0:fd97:b11b:9895:49c0
             ↓
-Successful sign-ins from same IP
+Successful sign-ins from same IP (chronology not verified)
             ↓
 OfficeHome / Outlook / account portals
             ↓
@@ -234,7 +236,7 @@ Conditional Access status reviewed
 |---|---|
 | User Principal Name | `allan.smith@finegalo.thm` |
 | Source IPv6 | `2804:2488:7082:a4c0:fd97:b11b:9895:49c0` |
-| Failed Sign-ins | `26` |
+| Nonzero-code records (user-level aggregation) | `26` — per-IP and 50126 breakdown pending |
 | Application | `OfficeHome` |
 | Application | `One Outlook Web` |
 | Client | `Browser` |
@@ -285,7 +287,7 @@ to:
 Successful authentication from the same source
 ```
 
-This provided stronger evidence of possible account compromise than either dataset alone.
+This justified event-level follow-up, but the observed shared source did not prove a failure-before-success timeline or account compromise.
 
 ---
 
@@ -302,7 +304,7 @@ My Profile
 My Signins
 ```
 
-This helped identify what cloud resources were accessed after authentication.
+This identified which applications appeared in successful sign-in records; it did not independently establish subsequent in-app actions.
 
 ---
 
@@ -337,13 +339,13 @@ I did not assume that MFA was successfully completed without reviewing separate 
 
 In this lab, I investigated suspicious Microsoft Entra ID authentication activity using Splunk.
 
-I identified 26 failed sign-in attempts against `allan.smith@finegalo.thm`, all associated with the same IPv6 address.
+The user-level search returned 26 nonzero-code sign-in records for `allan.smith@finegalo.thm` and listed the IPv6 address `2804:2488:7082:a4c0:fd97:b11b:9895:49c0`. The preserved result did **not** establish that all 26 were invalid-password attempts or that they came from this single address.
 
-I then found successful sign-ins from that same source and identified access to Microsoft 365 applications including OfficeHome and Outlook.
+I also found successful sign-in records for that source and applications including OfficeHome and Outlook. Whether those events occurred after a specific credential-failure sequence remains to be verified by timestamps.
 
 Finally, I reviewed the successful sessions and confirmed that they were interactive browser-based sign-ins with a successful Conditional Access status.
 
-This lab provided practical experience investigating cloud identity authentication and correlating failed and successful sign-in activity using Microsoft Entra ID telemetry.
+This lab provided practical experience using Entra ID and Splunk sign-in telemetry while identifying a crucial evidence gap: aggregation does not replace a chronological, event-level investigation.
 
 ---
 

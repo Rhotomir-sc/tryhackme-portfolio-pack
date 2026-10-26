@@ -33,4 +33,20 @@ userPrincipalName="allan.smith@finegalo.thm"
 | table _time userPrincipalName appDisplayName ipAddress clientAppUsed isInteractive conditionalAccessStatus
 ```
 
+
+## Snippet 4 — event-level export for chronology verification (not yet rerun)
+
+The earlier `stats values(...)` queries summarize fields but do not preserve the ordering of individual failed and successful sign-ins. The follow-up below is **prepared only**, not executed on the original room dataset:
+
+```spl
+index=scenario sourcetype="azure:aad:signin"
+userPrincipalName="allan.smith@finegalo.thm"
+ipAddress="2804:2488:7082:a4c0:fd97:b11b:9895:49c0"
+| eval event_epoch=_time
+| table event_epoch userPrincipalName ipAddress status.errorCode appDisplayName clientAppUsed isInteractive conditionalAccessStatus
+| sort 0 event_epoch
+```
+
+Retain each event's `status.errorCode`; distinguish `50126` incorrect credentials from `50140` Keep me signed in interrupt. [Export procedure and tested offline validator](timeline-review.md).
+
 [Investigation](README.md)

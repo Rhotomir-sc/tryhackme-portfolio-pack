@@ -1,283 +1,39 @@
-# TryHackMe Cybersecurity Portfolio
+# TryHackMe — Defensive Security Portfolio
 
-## Review guide
+**12 documented labs · Linux · Network Analysis · SOC/IR · Cloud Identity**
 
-Each lab now has an evidence index and a short question/limitation summary. [Documentation standard](DOCUMENTATION.md). The CTF and learning-journal sections are currently templates awaiting entries.
+This repository contains my hands-on cybersecurity investigations in authorized TryHackMe training environments. The emphasis is on **the question investigated, evidence collected, interpretation and limitations** — not room-completion badges.
 
+## Start here
 
-This repository documents my hands-on cybersecurity practice through TryHackMe labs.
+- **[All 12 labs and their evidence](LAB-INDEX.md)** — one-page index linking every investigation and its evidence.
+- **[Cloud identity sign-in analysis](portfolio-labs/10-cloud-identity-basics/README.md)** — Microsoft Entra ID / Microsoft 365 events investigated with Splunk; includes an explicit [timeline verification gap](portfolio-labs/10-cloud-identity-basics/timeline-review.md).
+- **[SIEM alert triage](portfolio-labs/06-siem-alert-triage/README.md)** — suspicious scheduled-task activity and the limits of what process telemetry establishes.
+- **[Incident response journal](portfolio-labs/07-incident-response-journal/README.md)** — a Windows malware scenario involving process activity, network attempts, macro behavior and registry persistence.
 
-Instead of using the repository as a list of completed rooms, I use each lab to document a specific security task, the evidence I collected, the tools I used, and the conclusions I reached.
+## Work by area
 
-The portfolio currently focuses on defensive security, SOC analysis, incident response, network analysis, Windows telemetry, threat intelligence, cloud identity, and access control.
+| Area | Labs |
+|---|---|
+| Linux and access control | [Users and groups](portfolio-labs/01-linux-user-management/README.md) · [Permissions](portfolio-labs/02-linux-permissions-and-least-privilege/README.md) |
+| Network analysis | [Wireshark](portfolio-labs/03-wireshark-traffic-analysis/README.md) · [Nmap](portfolio-labs/04-nmap-host-discovery/README.md) |
+| SOC and logs | [Apache logs](portfolio-labs/05-log-analysis-basics/README.md) · [Splunk triage](portfolio-labs/06-siem-alert-triage/README.md) · [Windows and Sysmon](portfolio-labs/09-windows-event-log-analysis/README.md) |
+| Incident investigation | [Incident response](portfolio-labs/07-incident-response-journal/README.md) · [Threat intelligence](portfolio-labs/08-threat-intelligence-ioc-analysis/README.md) |
+| Identity and access | [Cloud sign-ins](portfolio-labs/10-cloud-identity-basics/README.md) · [Windows firewall](portfolio-labs/11-firewall-rule-audit/README.md) |
+| Email security | [Phishing analysis](portfolio-labs/12-phishing-detection/README.md) |
 
----
+## Investigation approach
 
-## Portfolio Focus
+**Observe → collect → correlate → evaluate → document.**
 
-My main technical direction is:
+For each lab, I record the technical evidence and distinguish what it **shows** from what it **might mean**. For example, an HTTP 200 response is not proof of an authenticated session, and a successful sign-in from an IP associated with failed attempts does not independently prove compromise.
 
-```text
-Cloud Security
-+
-Identity Security
-+
-SOC / Incident Response
-```
+Each lab includes an [evidence index](LAB-INDEX.md). Screenshots are selected for technical value; historical completion images are not presented as investigation proof. See the [documentation standard](DOCUMENTATION.md).
 
-I am building this foundation through practical work in:
+## Current direction
 
-- Linux administration and access control
-- network discovery and packet analysis
-- log analysis and SIEM investigation
-- Windows event and Sysmon analysis
-- incident response
-- threat intelligence
-- Microsoft Entra ID authentication monitoring
-- firewall auditing
-- phishing analysis
+I am developing deeper skills in **Microsoft Entra ID, IAM, cloud security, SOC detection and incident response**, with controlled offensive-security practice to understand attacker techniques and improve defensive reasoning.
 
-I also study offensive security fundamentals to better understand attacker behaviour from a defensive perspective.
+Related work: [Google Cybersecurity certificate portfolio](https://github.com/Rhotomir-sc/google-cybersecurity-portfolio-pack) · [Security capstone](https://github.com/Rhotomir-sc/security-capstone) · [Academic work](https://github.com/Rhotomir-sc/semester-evidence-packs).
 
----
-
-# Portfolio Labs
-
-The repository contains 12 completed hands-on labs.
-
-Each lab has its own README and selected screenshots that show actual investigation or technical work.
-
-## Linux & Access Control
-
-### [01 - Linux User Management](portfolio-labs/01-linux-user-management)
-
-Practice with Linux user creation, group membership, and account verification.
-
-### [02 - Linux Permissions and Least Privilege](portfolio-labs/02-linux-permissions-and-least-privilege)
-
-Reviewing Linux file permissions and applying least-privilege changes.
-
----
-
-## Network Discovery & Packet Analysis
-
-### [03 - Wireshark Traffic Analysis](portfolio-labs/03-wireshark-traffic-analysis)
-
-Analysing FTP and HTTP traffic with Wireshark filters and reviewing protocol behaviour.
-
-### [04 - Nmap Host Discovery](portfolio-labs/04-nmap-host-discovery)
-
-Comparing Nmap discovery methods and identifying live hosts and exposed services.
-
----
-
-## SOC & Log Analysis
-
-### [05 - Log Analysis Basics](portfolio-labs/05-log-analysis-basics)
-
-Analysing Apache logs with command-line tools to identify HTTP errors, request patterns, and suspicious endpoints.
-
-### [06 - SIEM Alert Triage](portfolio-labs/06-siem-alert-triage)
-
-Investigating a Windows scheduled-task alert in Splunk and distinguishing observed evidence from assumptions.
-
-### [09 - Windows Event Log Analysis](portfolio-labs/09-windows-event-log-analysis)
-
-Correlating Windows Security logs, Sysmon telemetry, DNS activity, process behaviour, persistence, and PowerShell history.
-
----
-
-## Incident Response & Threat Intelligence
-
-### [07 - Incident Response Journal](portfolio-labs/07-incident-response-journal)
-
-Following a Windows malware incident through detection, analysis, containment, eradication, and recovery.
-
-### [08 - Threat Intelligence & IOC Analysis](portfolio-labs/08-threat-intelligence-ioc-analysis)
-
-Using SHA-256 hashes, sandbox intelligence, network indicators, malware classification, and MITRE ATT&CK mappings.
-
-### [12 - Phishing Detection](portfolio-labs/12-phishing-detection)
-
-Analysing a suspicious email through sender information, URLs, message headers, and SPF/DKIM/DMARC interpretation.
-
----
-
-## Cloud, Identity & Security Engineering
-
-### [10 - Cloud Identity Basics](portfolio-labs/10-cloud-identity-basics)
-
-Investigating Microsoft Entra ID sign-in logs in Splunk and correlating failed and successful cloud authentication activity.
-
-### [11 - Firewall Rule Audit](portfolio-labs/11-firewall-rule-audit)
-
-Auditing Windows Defender Firewall profiles and identifying overly permissive remote-management rules.
-
----
-
-# Skills Demonstrated
-
-Across the labs, I practiced:
-
-- Linux user and permission management
-- least-privilege access control
-- Wireshark packet filtering
-- Nmap host discovery
-- Apache log analysis
-- Splunk searches and SIEM triage
-- Windows Security Event analysis
-- Sysmon telemetry analysis
-- parent-child process investigation
-- PowerShell history review
-- incident response workflows
-- IOC collection and enrichment
-- SHA-256 hashing
-- malware sandbox analysis
-- MITRE ATT&CK mapping
-- Microsoft Entra ID sign-in analysis
-- authentication failure investigation
-- cloud identity correlation
-- Windows firewall auditing
-- phishing email analysis
-- SPF, DKIM, and DMARC interpretation
-
----
-
-# Investigation Approach
-
-I try to follow the same basic workflow throughout the repository:
-
-```text
-Observe
-   ↓
-Collect Evidence
-   ↓
-Correlate
-   ↓
-Analyse
-   ↓
-Document
-```
-
-A major focus of the portfolio is separating:
-
-```text
-Observed Evidence
-```
-
-from:
-
-```text
-Assumptions
-```
-
-For example, I avoid labeling unusual network traffic as confirmed command-and-control unless the evidence supports that conclusion.
-
----
-
-# Evidence Policy
-
-This repository is not intended to be a TryHackMe screenshot archive.
-
-Screenshots are included only when they demonstrate useful technical evidence, such as:
-
-- commands I executed
-- filters I applied
-- process or log findings
-- network indicators
-- persistence mechanisms
-- remediation actions
-- authentication evidence
-- configuration findings
-
-Featured evidence focuses on technical observations. Older completion images remain in the file history/asset folders but are not featured as technical proof.
-
----
-
-# Google Cybersecurity Connection
-
-Some labs connect to topics covered in the Google Cybersecurity Certificate.
-
-When relevant, individual lab READMEs include a short **Google Cybersecurity Connection** section explaining how I reinforced course concepts through hands-on practice.
-
-The Google course material itself is documented separately rather than duplicated inside this TryHackMe repository.
-
----
-
-# CTF Practice
-
-The [`ctf-practice`](ctf-practice) directory contains additional challenge-based practice.
-
-The goal is to improve:
-
-- problem solving
-- technical investigation
-- command-line confidence
-- offensive-security awareness
-
-It is kept separate from the main portfolio labs because the portfolio labs focus more strongly on structured defensive-security documentation.
-
----
-
-# Learning Journal
-
-The [`learning-journal`](learning-journal) directory is used for short notes and progress tracking.
-
-It is separate from the polished portfolio labs so that the main lab folders remain focused on completed technical work.
-
----
-
-# Repository Structure
-
-```text
-tryhackme-portfolio-pack/
-│
-├── portfolio-labs/
-│   ├── 01-linux-user-management/
-│   ├── 02-linux-permissions-and-least-privilege/
-│   ├── 03-wireshark-traffic-analysis/
-│   ├── 04-nmap-host-discovery/
-│   ├── 05-log-analysis-basics/
-│   ├── 06-siem-alert-triage/
-│   ├── 07-incident-response-journal/
-│   ├── 08-threat-intelligence-ioc-analysis/
-│   ├── 09-windows-event-log-analysis/
-│   ├── 10-cloud-identity-basics/
-│   ├── 11-firewall-rule-audit/
-│   └── 12-phishing-detection/
-│
-├── ctf-practice/
-├── learning-journal/
-└── README.md
-```
-
----
-
-# Current Direction
-
-The 12-lab foundation in this repository is complete.
-
-My next technical focus is to go deeper into:
-
-```text
-Microsoft Entra ID
-IAM
-Cloud Security
-SOC / Incident Response
-```
-
-and later connect these areas with:
-
-```text
-AI Security
-```
-
-The goal is to continue moving from beginner labs toward more realistic security investigations, cloud identity scenarios, and larger end-to-end projects.
-
----
-
-# Disclaimer
-
-All activities in this repository were performed in legal training environments and systems specifically provided for cybersecurity learning.
-
-No real-world systems were targeted.
+*Training environments only. Any unverified follow-up or planned task is identified rather than presented as completed work.*

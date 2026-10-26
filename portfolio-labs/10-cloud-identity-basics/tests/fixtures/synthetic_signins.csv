@@ -1,0 +1,9 @@
+event_epoch,userPrincipalName,ipAddress,appDisplayName,status.errorCode
+1789027200,analyst@training.invalid,2001:db8::10,OfficeHome,50126
+1789027205,analyst@training.invalid,2001:db8::10,OfficeHome,50126
+1789027210,analyst@training.invalid,2001:db8::10,OfficeHome,50126
+1789027211,analyst@training.invalid,2001:db8::10,OfficeHome,50140
+1789027220,analyst@training.invalid,2001:db8::10,OfficeHome,0
+1789027221,analyst@training.invalid,2001:db8::10,Outlook Web,0
+1789027222,unrelated@training.invalid,2001:db8::20,OfficeHome,50126
+1789027225,analyst@training.invalid,2001:db8::10,OfficeHome,53003

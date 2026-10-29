@@ -119,15 +119,43 @@ def evaluate(events, threshold=3, window_minutes=10):
     }
 
 
+
+def redact_identifiers(report):
+    """Replace identities in findings with stable per-report labels.
+
+    This is a presentation convenience, not anonymization: timings and
+    application names can still be identifying in some contexts.
+    """
+    from copy import deepcopy
+
+    sanitized = deepcopy(report)
+    users = sorted({item["user"] for item in sanitized["findings"]})
+    sources = sorted({item["source_ip"] for item in sanitized["findings"]})
+    user_labels = {value: f"user_{i}" for i, value in enumerate(users, 1)}
+    source_labels = {value: f"source_{i}" for i, value in enumerate(sources, 1)}
+    for finding in sanitized["findings"]:
+        finding["user"] = user_labels[finding["user"]]
+        finding["source_ip"] = source_labels[finding["source_ip"]]
+    sanitized["identifier_display"] = "redacted_review_labels"
+    sanitized["limitations"].append(
+        "Identifiers were replaced only in findings; timestamps and apps still need privacy review."
+    )
+    return sanitized
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input", type=Path, required=True, help="CSV with event_epoch field")
     parser.add_argument("--threshold", type=int, default=3)
     parser.add_argument("--window-minutes", type=str, default="10")
     parser.add_argument("--format", choices=("text", "json"), default="text")
+    parser.add_argument("--redact-identifiers", action="store_true",
+                        help="Replace user/IP fields with local review labels in output")
     args = parser.parse_args(argv)
     try:
         report = evaluate(read_events(args.input), args.threshold, args.window_minutes)
+        if args.redact_identifiers:
+            report = redact_identifiers(report)
     except (OSError, ValueError) as exc:
         parser.exit(2, f"Error: {exc}\n")
 

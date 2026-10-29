@@ -51,6 +51,16 @@ It **does not** count 50140 (KMSI) as an incorrect-password event. Other nonzero
 
 Change the threshold or time window, if necessary, with `--threshold N --window-minutes M`. A result is an **investigation lead**, not a breach verdict.
 
+### Share a review summary without raw user and IP fields
+
+If you need to show the analysis output in a public portfolio, add `--redact-identifiers`:
+
+```sh
+python portfolio-labs/10-cloud-identity-basics/tools/validate_signin_timeline.py --input path/to/authorized-export.csv --format json --redact-identifiers
+```
+
+This replaces finding-level user and source-IP values with `user_1`, `source_1`, and similar labels, consistently within a single report. **This is not full anonymization**: event times, application names, counts and the scenario description can still reveal context. Review the result carefully before publishing, and do not commit the raw export.
+
 ## Step 3 — Validate the tool using synthetic data (available now)
 
 This exercise can be reproduced today without access to TryHackMe:

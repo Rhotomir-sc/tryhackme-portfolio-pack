@@ -10,7 +10,7 @@ import unittest
 
 LAB = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(LAB / "tools"))
-from validate_signin_timeline import evaluate, main, read_events
+from validate_signin_timeline import evaluate, main, read_events, redact_identifiers
 
 FIXTURE = LAB / "tests" / "fixtures" / "synthetic_signins.csv"
 BASE = Decimal("1789027200")
@@ -122,6 +122,32 @@ class TimelineTests(unittest.TestCase):
         self.assertEqual(result["total_rows"], 8)
         self.assertEqual(len(result["findings"]), 1)
         self.assertEqual(result["credential_failure_code"], 50126)
+
+    def test_redacted_cli_does_not_expose_fixture_identity(self):
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            main(["--input", str(FIXTURE), "--format", "json", "--redact-identifiers"])
+        body = out.getvalue()
+        result = json.loads(body)
+        self.assertNotIn("analyst@training.invalid", body)
+        self.assertNotIn("2001:db8::10", body)
+        self.assertEqual(result["findings"][0]["user"], "user_1")
+        self.assertEqual(result["findings"][0]["source_ip"], "source_1")
+        self.assertEqual(result["identifier_display"], "redacted_review_labels")
+
+    def test_redaction_is_stable_per_report_without_mutating_original(self):
+        events = [event(i, 50126) for i in (0, 1, 2)]
+        events += [event(3, 0)]
+        events += [event(i, 50126, user="beta@training.invalid",
+                         ip="2001:db8::20") for i in (5, 6, 7)]
+        events += [event(8, 0, user="beta@training.invalid", ip="2001:db8::20")]
+        report = evaluate(events)
+        result = redact_identifiers(report)
+        self.assertEqual(len(result["findings"]), 2)
+        self.assertEqual([x["user"] for x in result["findings"]], ["user_1", "user_2"])
+        self.assertEqual([x["source_ip"] for x in result["findings"]], ["source_1", "source_2"])
+        self.assertEqual(report["findings"][0]["user"], "analyst@training.invalid")
+        self.assertEqual(report["findings"][1]["source_ip"], "2001:db8::20")
 
     def test_missing_input_exits_with_error(self):
         with tempfile.TemporaryDirectory() as tmp:
